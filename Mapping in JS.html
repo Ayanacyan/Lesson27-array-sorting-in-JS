@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Mapping in JS</title>
+    </head>
+    <body>
+        <h2>Mapping in JS</h2>
+        <p id="product_value"></p>
+        <script>
+            var numbers=[5, 80, 267, 93, 2];
+            function MyFunction(num){
+                return num*10;
+            }
+            var newarray=numbers.map(MyFunction);
+            document.getElementById("product_value").innerHTML=
+            newarray;
+        </script>
+    </body>
+</html>
