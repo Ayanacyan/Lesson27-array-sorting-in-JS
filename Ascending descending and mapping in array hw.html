@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Mapping and ordering in arrays</title>
+    </head>
+    <body>
+        <p>Mapping and ordering in arrays</p>
+          <p id="product_value"></p>
+         <button onclick="ascending()">Ascending order:</button> 
+        <button onclick="descending()">Descending order:</button>
+        <p id="result"></p>     
+        <script>
+            var numbers=[6, 8, 20, 5, 2];
+            function MyFunction(num){
+                return num+90;
+            }
+            var newarray=numbers.map(MyFunction);
+            document.getElementById("product_value").innerHTML=
+            newarray;
+            var points=[420, 59, 17, 94, 239];
+            document.getElementById("result").innerHTML= points;
+            function ascending(){
+                points.sort(function(a, b){return a-b});
+                document.getElementById("result").innerHTML= points;
+            }
+            function descending(){
+                 points.sort(function(a, b){return b-a});
+                document.getElementById("result").innerHTML= points;
+            }
+        </script>
+    </body>
+</html>
